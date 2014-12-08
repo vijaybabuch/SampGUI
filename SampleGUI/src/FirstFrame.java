@@ -23,6 +23,7 @@ public class FirstFrame extends JFrame {
 	private JLabel jLabel1;
 	private JTextField jTextField0;
 	private JButton jButton0;
+	private JButton jButton1;
 	private static final String PREFERRED_LOOK_AND_FEEL = "javax.swing.plaf.metal.MetalLookAndFeel";
 	public FirstFrame() {
 		initComponents();
@@ -33,6 +34,14 @@ public class FirstFrame extends JFrame {
 		add(getJPanel0(), new Constraints(new Leading(3, 441, 10, 10), new Leading(6, 34, 10, 10)));
 		add(getJPanel1(), new Constraints(new Leading(5, 436, 12, 12), new Leading(46, 168, 10, 10)));
 		setSize(449, 221);
+	}
+
+	private JButton getJButton1() {
+		if (jButton1 == null) {
+			jButton1 = new JButton();
+			jButton1.setText("Submit");
+		}
+		return jButton1;
 	}
 
 	private JButton getJButton0() {
@@ -64,8 +73,9 @@ public class FirstFrame extends JFrame {
 			jPanel1.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED, null, null));
 			jPanel1.setLayout(new GroupLayout());
 			jPanel1.add(getJLabel1(), new Constraints(new Leading(27, 113, 10, 10), new Leading(27, 22, 12, 12)));
-			jPanel1.add(getJTextField0(), new Constraints(new Leading(152, 128, 12, 12), new Leading(25, 27, 12, 12)));
-			jPanel1.add(getJButton0(), new Constraints(new Leading(301, 10, 10), new Leading(27, 12, 12)));
+			jPanel1.add(getJButton1(), new Constraints(new Leading(152, 12, 12), new Leading(70, 12, 12)));
+			jPanel1.add(getJButton0(), new Constraints(new Leading(267, 10, 10), new Leading(70, 12, 12)));
+			jPanel1.add(getJTextField0(), new Constraints(new Leading(152, 187, 10, 10), new Leading(25, 27, 12, 12)));
 		}
 		return jPanel1;
 	}
