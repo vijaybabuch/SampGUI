@@ -39,7 +39,7 @@ public class FirstFrame extends JFrame {
 	private JButton getJButton1() {
 		if (jButton1 == null) {
 			jButton1 = new JButton();
-			jButton1.setText("Submit");
+			jButton1.setText("Submit ID");
 		}
 		return jButton1;
 	}
